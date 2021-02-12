@@ -4,6 +4,7 @@ import {
   Optional,
   SkipSelf,
   Inject,
+  NO_ERRORS_SCHEMA,
 } from '@angular/core';
 import { APP_BASE_HREF, CommonModule } from '@angular/common';
 
@@ -16,6 +17,7 @@ import { environment } from './environments/environment';
 import { LogService } from './services/log.service';
 import { PlatformLanguageToken } from './services/tokens';
 import { WindowService } from './services/window.service';
+import { LoginComponent } from "./components/login.component";
 
 /**
  * DEBUGGING
@@ -24,6 +26,8 @@ LogService.DEBUG.LEVEL_4 = !environment.production;
 
 @NgModule({
   imports: [CommonModule],
+  declarations: [LoginComponent],
+  schemas: [NO_ERRORS_SCHEMA]
 })
 export class CoreModule {
   // configuredProviders: *required to configure WindowService and others per platform
