@@ -12,4 +12,5 @@ module.exports = {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../../coverage/libs/xplat/core',
+  setupFilesAfterEnv: ['./test-setup.ts'],
 };
