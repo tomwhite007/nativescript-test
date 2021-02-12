@@ -1,7 +1,7 @@
 {
   "version": 1,
   "cli": {
-    "defaultCollection": "@nrwl/angular"
+    "defaultCollection": "@nstudio/xplat"
   },
   "schematics": {
     "@nrwl/angular": {
@@ -142,6 +142,252 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/angular-test-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "xplat-nativescript-scss": {
+      "root": "libs/xplat/nativescript/scss",
+      "sourceRoot": "libs/xplat/nativescript/scss/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/xplat/nativescript/scss/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/xplat/nativescript/scss"],
+          "options": {
+            "jestConfig": "libs/xplat/nativescript/scss/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "xplat-nativescript-utils": {
+      "root": "libs/xplat/nativescript/utils",
+      "sourceRoot": "libs/xplat/nativescript/utils/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/xplat/nativescript/utils/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/xplat/nativescript/utils"],
+          "options": {
+            "jestConfig": "libs/xplat/nativescript/utils/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "xplat-nativescript-core": {
+      "root": "libs/xplat/nativescript/core",
+      "sourceRoot": "libs/xplat/nativescript/core/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/xplat/nativescript/core/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/xplat/nativescript/core"],
+          "options": {
+            "jestConfig": "libs/xplat/nativescript/core/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "xplat-nativescript-features": {
+      "root": "libs/xplat/nativescript/features",
+      "sourceRoot": "libs/xplat/nativescript/features/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/xplat/nativescript/features/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/xplat/nativescript/features"],
+          "options": {
+            "jestConfig": "libs/xplat/nativescript/features/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "xplat-core": {
+      "root": "libs/xplat/core",
+      "sourceRoot": "libs/xplat/core/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/xplat/core/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/xplat/core"],
+          "options": {
+            "jestConfig": "libs/xplat/core/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "xplat-features": {
+      "root": "libs/xplat/features",
+      "sourceRoot": "libs/xplat/features/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/xplat/features/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/xplat/features"],
+          "options": {
+            "jestConfig": "libs/xplat/features/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "xplat-scss": {
+      "root": "libs/xplat/scss",
+      "sourceRoot": "libs/xplat/scss/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/xplat/scss/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/xplat/scss"],
+          "options": {
+            "jestConfig": "libs/xplat/scss/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "xplat-utils": {
+      "root": "libs/xplat/utils",
+      "sourceRoot": "libs/xplat/utils/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/xplat/utils/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/xplat/utils"],
+          "options": {
+            "jestConfig": "libs/xplat/utils/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "nativescript-mobile": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "root": "apps/nativescript-mobile/",
+      "sourceRoot": "apps/nativescript-mobile/src",
+      "prefix": "nativescript-test",
+      "architect": {
+        "default": {
+          "builder": "@nrwl/workspace:run-commands",
+          "configurations": {
+            "dev": {
+              "fileReplacements": [
+                {
+                  "replace": "libs/xplat/core/src/lib/environments/environment.ts",
+                  "with": "apps/nativescript-mobile/src/environments/environment.dev.ts"
+                }
+              ]
+            },
+            "prod": {
+              "fileReplacements": [
+                {
+                  "replace": "libs/xplat/core/src/lib/environments/environment.ts",
+                  "with": "apps/nativescript-mobile/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "ios": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "command": "ns debug ios --no-hmr --env.projectName=nativescript-mobile",
+            "cwd": "apps/nativescript-mobile"
+          }
+        },
+        "android": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "command": "ns debug android --no-hmr --env.projectName=nativescript-mobile",
+            "cwd": "apps/nativescript-mobile"
+          }
+        },
+        "clean": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": [
+              "ns clean",
+              "npm i",
+              "npx rimraf package-lock.json"
+            ],
+            "cwd": "apps/nativescript-mobile",
+            "parallel": false
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/nativescript-mobile/**/*.ts",
+              "apps/nativescript-mobile/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/nativescript-mobile/jest.config.js",
+            "tsConfig": "apps/nativescript-mobile/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "apps/nativescript-mobile/src/test-setup.ts"
           }
         }
       }
